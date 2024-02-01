@@ -64,6 +64,18 @@ const App = () => {
         localStorage.setItem('cepData', JSON.stringify({ ...cepData, [name]: value }));
       };
 
+      const handleClear = () => {
+        setCepData({
+          logradouro: '',
+          bairro: '',
+          localidade: '',
+          uf: ''
+        });
+        setCep('');
+        localStorage.removeItem('cepData'); 
+      };
+    
+
   return (
     <Container fluid style={{ backgroundColor: 'black', minHeight: '100vh' }}>
         <Navbar bg="blue" expand="lg">
@@ -346,6 +358,23 @@ const App = () => {
                 </Row>
             </Container>
         </WithAnimation>
+        <Container className='background-button d-flex justify-content-center align-items-center' style={{ minHeight: '10vh' }}>
+            <Button
+                style={{
+                    backgroundColor: '#F7A70A',
+                    borderColor: 'black',
+                    borderRadius: '50px',
+                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                    fontSize: '20px', 
+                    padding: '15px 30px', 
+                    minWidth: '200px', 
+                }}
+            className = 'rounded-pill custom-btn'
+            onClick={handleClear}
+            >
+                Limpar
+            </Button>
+        </Container>
         <Container className='background-space'></Container>
         <footer className="text-light py-3" style={{ backgroundColor: '#be7f01' }}>
             <Container fluid>
