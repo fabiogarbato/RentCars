@@ -25,7 +25,7 @@ import Nodejs from './images/node.png'
 import React_framework from './images/react.png'
 
 const WhatsAppButton = ({ phoneNumber }) => {
-    const whatsappLink = `https://wa.me/55${phoneNumber}?text=Adorei%20seu%20artigo`;
+    const whatsappLink = `https://wa.me/55${phoneNumber}?text=Olá!%20Estamos%20entrando%20em%20contato%20contigo%20para%20informa-lo%20que%20você%20foi%20*APROVADO*%20em%20nosso%20processo%20seletivo!%20:D`;
     return (
       <a href={whatsappLink} className="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <FaWhatsapp />
@@ -262,9 +262,9 @@ const App = () => {
             </Container>
         </WithAnimation>
         <Container className='background-space'></Container>
-        <footer className="bg-black text-light py-3">
+        <footer className="text-light py-3" style={{ backgroundColor: '#be7f01' }}>
             <Container fluid>
-                <p className="text-center mb-0">© Fábio Garbato - {new Date().getFullYear()}</p>
+                <p className="text-center mb-0" style={{color:'black'}}>© Fábio Garbato - {new Date().getFullYear()}</p>
             </Container>
         </footer>
         <WhatsAppButton phoneNumber="41987372059"/>
