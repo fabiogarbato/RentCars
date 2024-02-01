@@ -99,7 +99,7 @@ const App = () => {
                     <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'> 
                         <div className='d-flex align-items-start flex-grow-1'>
                             <p className='text-description' style={{ color: 'black' }}>
-                                Apaixonado por tencologia, e entusiasta de carros, natural de São Paulo - SP, aos 17 anos me mudei para Curitiba, onde resido sozinho até hoje com meus 22 anos.                               
+                                Apaixonado por tencologia, e entusiasta por carros, natural de São Paulo - SP, aos 17 anos me mudei para Curitiba, onde resido sozinho até hoje com meus 22 anos.                               
                             </p>
                         </div>
                     </Col>
