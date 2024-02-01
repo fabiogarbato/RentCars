@@ -17,6 +17,12 @@ import WithAnimation from './WithAnimation';
 import Hollow from './images/hollow.png'
 import Dark from './images/dark.png'
 import Euro from './images/euro.png'
+import Banco from './images/banco.png'
+import Css from './images/css.png'
+import Html from './images/html.png'
+import JavaScript from './images/javascript.png'
+import Nodejs from './images/node.png'
+import React_framework from './images/react.png'
 
 const WhatsAppButton = ({ phoneNumber }) => {
     const whatsappLink = `https://wa.me/55${phoneNumber}?text=Adorei%20seu%20artigo`;
@@ -70,6 +76,13 @@ const App = () => {
                                 borderRadius: '50%', 
                             }}
                         />
+                    </Col>
+                </WithAnimation>
+            </Row>
+            <Row className='h-100 d-flex justify-content-center align-items-center'>
+                <WithAnimation>
+                    <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'>
+                        <span className='text-before' style={{ color: '#F7A70A' }}>FÁBIO GARBATO</span>
                     </Col>
                 </WithAnimation>
             </Row>
@@ -156,14 +169,98 @@ const App = () => {
                         </Col>
                     </Row> 
                 </Container>
-
             </WithAnimation>
         </Container>
         <Container id='cardapio' className='background-space'></Container>
         <WithAnimation>
             <Container id='cardapio' className='text-first background-cardapio' style={{ color: '#F7A70A' }}>Minhas Qualificações</Container>
         </WithAnimation>
-       
+        <WithAnimation>
+            <Container className='background-section2'>
+                <Row className="mb-3">
+                    <Col xs={12} md={4} style={{ padding: 0, height: '40vh'}}>
+                        <Image
+                            className="d-block move"
+                            src={Html}
+                            roundedCircle
+                            style={{
+                            width: '100%',        
+                            height: '40vh',       
+                            objectFit: 'contain', 
+                            objectPosition: 'center center' 
+                            }}
+                        />
+                    </Col>
+                    <Col xs={12} md={4} style={{ padding: 0, height: '40vh'}}>
+                        <Image
+                            className="d-block move"
+                            src={Css}
+                            roundedCircle 
+                            style={{
+                            width: '100%',        
+                            height: '40vh',       
+                            objectFit: 'contain', 
+                            objectPosition: 'center center' 
+                            }}
+                        />
+                    </Col>
+                    <Col xs={12} md={4} style={{ padding: 0, height: '40vh'}}>
+                        <Image
+                            className="d-block move"
+                            src={JavaScript}
+                            roundedCircle 
+                            style={{
+                            width: '100%',        
+                            height: '40vh',       
+                            objectFit: 'contain', 
+                            objectPosition: 'center center' 
+                            }}
+                        />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={12} md={4} style={{ padding: 0, height: '40vh'}}>
+                        <Image
+                            className="d-block move"
+                            src={Nodejs}
+                            roundedCircle 
+                            style={{
+                            width: '100%',        
+                            height: '40vh',       
+                            objectFit: 'contain', 
+                            objectPosition: 'center center' 
+                            }}
+                        />           
+                    </Col>
+                    <Col xs={12} md={4} style={{ padding: 0, height: '40vh'}}>
+                        <Image
+                            className="d-block move"
+                            src={React_framework}
+                            roundedCircle 
+                            style={{
+                            width: '100%',        
+                            height: '40vh',       
+                            objectFit: 'contain', 
+                            objectPosition: 'center center' 
+                            }}
+                        />
+                    </Col>
+                    <Col xs={12} md={4} style={{ padding: 0, height: '40vh'}}>
+                        <Image
+                            className="d-block move"
+                            src={Banco}
+                            roundedCircle 
+                            style={{
+                            width: '100%',        
+                            height: '40vh',       
+                            objectFit: 'contain', 
+                            objectPosition: 'center center' 
+                            }}
+                        />
+                    </Col>
+                </Row>
+            </Container>
+        </WithAnimation>
         <Container className='background-space'></Container>
         <footer className="bg-black text-light py-3">
             <Container fluid>
