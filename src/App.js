@@ -1,19 +1,12 @@
 import './index.css';
 import './tabela.css';
-import {Container, Carousel, Row, Col, Image, Table, Button}  from 'react-bootstrap';
+import {Container, Row, Col, Image, Form, Button, InputGroup }  from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
+import React, {useState, useEffect } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import logo from './images/logo.png';
-import OBelico from './images/Obelico.png';
-import Cabana from './images/logo-cabana.png';
-import Face from './images/face.png';
-import Insta from './images/insta.png';
-import Fabio from './images/fabio.jpg';
-import VideoInstitucional from './video/institucional_video.mp4';
-import WithAnimation from './WithAnimation';
 import Hollow from './images/hollow.png'
 import Dark from './images/dark.png'
 import Euro from './images/euro.png'
@@ -23,6 +16,9 @@ import Html from './images/html.png'
 import JavaScript from './images/javascript.png'
 import Nodejs from './images/node.png'
 import React_framework from './images/react.png'
+import Fabio from './images/fabio.jpg';
+import WithAnimation from './WithAnimation';
+import fetchCepData from './API_Cep';
 
 const WhatsAppButton = ({ phoneNumber }) => {
     const whatsappLink = `https://wa.me/55${phoneNumber}?text=Olá!%20Estamos%20entrando%20em%20contato%20contigo%20para%20informa-lo%20que%20você%20foi%20*APROVADO*%20em%20nosso%20processo%20seletivo!%20:D`;
@@ -34,6 +30,39 @@ const WhatsAppButton = ({ phoneNumber }) => {
   };
 
 const App = () => {  
+
+    const [cep, setCep] = useState('');
+    const [cepData, setCepData] = useState({
+      logradouro: '',
+      bairro: '',
+      localidade: '',
+      uf: ''
+    });
+
+    useEffect(() => {
+        const storedCepData = localStorage.getItem('cepData');
+        if (storedCepData) {
+          setCepData(JSON.parse(storedCepData));
+        }
+      }, []);
+    
+      const handleCepSubmit = async (event) => {
+        event.preventDefault();
+        const data = await fetchCepData(cep);
+        if (data) {
+          setCepData(data);
+          localStorage.setItem('cepData', JSON.stringify(data));
+        }
+      };
+    
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setCepData(prevState => ({
+          ...prevState,
+          [name]: value
+        }));
+        localStorage.setItem('cepData', JSON.stringify({ ...cepData, [name]: value }));
+      };
 
   return (
     <Container fluid style={{ backgroundColor: 'black', minHeight: '100vh' }}>
@@ -82,7 +111,21 @@ const App = () => {
             <Row className='h-100 d-flex justify-content-center align-items-center'>
                 <WithAnimation>
                     <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'>
-                        <span className='text-before' style={{ color: '#F7A70A' }}>FÁBIO GARBATO, 22 CURITIBA - PR</span>
+                        <span className='text-before' style={{ color: '#F7A70A' }}>FÁBIO GARBATO</span>
+                    </Col>
+                </WithAnimation>
+            </Row>
+            <Row className='h-100 d-flex justify-content-center align-items-center'>
+                <WithAnimation>
+                    <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'>
+                        <span className='text-before' style={{ color: '#F7A70A' }}>22 ANOS</span>
+                    </Col>
+                </WithAnimation>
+            </Row>
+            <Row className='h-100 d-flex justify-content-center align-items-center'>
+                <WithAnimation>
+                    <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'>
+                        <span className='text-before' style={{ color: '#F7A70A' }}>CURITIBA - PR</span>
                     </Col>
                 </WithAnimation>
             </Row>
@@ -257,6 +300,48 @@ const App = () => {
                             objectPosition: 'center center' 
                             }}
                         />
+                    </Col>
+                </Row>
+            </Container>
+        </WithAnimation>
+        <Container className='background-space'></Container>
+        <WithAnimation>
+            <Container className='background-section2'>
+                <Row className='h-100 d-flex justify-content-center align-items-center'>
+                    <Col xs={12} md={6}>
+                        <Form onSubmit={handleCepSubmit}>
+                            <Form.Label style={{color:'#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic'}}>CEP</Form.Label>
+                            <InputGroup className="mb-3">
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Digite seu CEP"
+                                    value={cep}
+                                    onChange={(e) => setCep(e.target.value)}
+                                    required
+                                />
+                                <Button style={{ backgroundColor: '#F7A70A', color:'black' }} variant="outline-secondary" type="submit">
+                                    Buscar
+                                </Button>
+                            </InputGroup>
+                        </Form>
+                        <Form>
+                            <Form.Group className="mb-3">
+                                <Form.Label style={{color:'#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic'}}>Logradouro</Form.Label>
+                                <Form.Control type="text" name="logradouro" value={cepData.logradouro} onChange={handleChange} />
+                            </Form.Group>
+                            <Form.Group className="mb-3">
+                                <Form.Label style={{color:'#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic'}}>Bairro</Form.Label>
+                                <Form.Control type="text" name="bairro" value={cepData.bairro} onChange={handleChange} />
+                            </Form.Group>
+                            <Form.Group className="mb-3">
+                                <Form.Label style={{color:'#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic'}}>Cidade</Form.Label>
+                                <Form.Control type="text" name="localidade" value={cepData.localidade} onChange={handleChange} />
+                            </Form.Group>
+                            <Form.Group className="mb-3">
+                                <Form.Label style={{color:'#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic'}}>Estado</Form.Label>
+                                <Form.Control type="text" name="uf" value={cepData.uf} onChange={handleChange} />
+                            </Form.Group>
+                        </Form>
                     </Col>
                 </Row>
             </Container>
