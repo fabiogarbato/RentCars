@@ -82,7 +82,7 @@ const App = () => {
             <Row className='h-100 d-flex justify-content-center align-items-center'>
                 <WithAnimation>
                     <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'>
-                        <span className='text-before' style={{ color: '#F7A70A' }}>FÁBIO GARBATO, 22 ANOS CURITIBA - PR</span>
+                        <span className='text-before' style={{ color: '#F7A70A' }}>FÁBIO GARBATO, 22 CURITIBA - PR</span>
                     </Col>
                 </WithAnimation>
             </Row>
