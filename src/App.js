@@ -85,14 +85,14 @@ const App = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
-                    <Nav.Link href="#sobre" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '40px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic'}}>  Quem Sou  </Nav.Link>
-                    <Nav.Link href="#cardapio" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '40px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic' }}>Qualificações</Nav.Link>
+                    <Nav.Link href="#sobre" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '40px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic'}}>  Apresentação  </Nav.Link>
+                    <Nav.Link href="#qualificacao" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '40px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic' }}>Qualificações</Nav.Link>
                     <Nav.Link href="#experiencias" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '40px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic' }}>Experiências</Nav.Link>
                     <Nav.Link href="#localizacao" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '40px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic' }}>Missão</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
-        <Container id='sobre' className='background-space'></Container>
+        <Container className='background-space'></Container>
         <Container className='background-section2'>
             <Row className='h-100 d-flex justify-content-center align-items-center'>
                 <WithAnimation>
@@ -101,7 +101,7 @@ const App = () => {
                     </Col>
                 </WithAnimation>
             </Row>
-            <Container id='sobre' className='background-space'></Container>
+            <Container className='background-space'></Container>
             <Row className='h-100 d-flex justify-content-center align-items-center'>
                 <WithAnimation>
                     <Col className='d-flex justify-content-center align-items-center'>
@@ -122,7 +122,7 @@ const App = () => {
             </Row>
             <Row className='h-100 d-flex justify-content-center align-items-center'>
                 <WithAnimation>
-                    <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'>
+                    <Col id='sobre' xs={12} lg={6} className='d-flex justify-content-center align-items-center'>
                         <span className='text-before' style={{ color: '#F7A70A' }}>FÁBIO GARBATO</span>
                     </Col>
                 </WithAnimation>
@@ -272,9 +272,9 @@ const App = () => {
                 </Container>
             </WithAnimation>
         </Container>
-        <Container id='cardapio' className='background-space'></Container>
+        <Container className='background-space'></Container>
         <WithAnimation>
-            <Container id='cardapio' className='text-first background-cardapio' style={{ color: '#F7A70A' }}>Algumas de Minhas Qualificações</Container>
+            <Container id='qualificacao' className='text-first background-cardapio' style={{ color: '#F7A70A' }}>Algumas de Minhas Qualificações</Container>
         </WithAnimation>
         <WithAnimation>
             <Container className='background-section2'>
@@ -366,6 +366,13 @@ const App = () => {
         <WithAnimation>
             <Container className='background-section2'>
                 <Row className='h-100 d-flex justify-content-center align-items-center'>
+                    <WithAnimation>
+                        <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'>
+                            <span className='text-before' style={{ color: '#F7A70A' }}>EXEMPLO API</span>
+                        </Col>
+                    </WithAnimation>
+                </Row>
+                <Row className='h-100 d-flex justify-content-center align-items-center'>
                     <Col xs={12} md={6}>
                         <Form onSubmit={handleCepSubmit}>
                             <Form.Label style={{color:'#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic'}}>CEP</Form.Label>
@@ -425,6 +432,82 @@ const App = () => {
         <WithAnimation>
             <Container id='experiencias' className='text-first background-cardapio' style={{ color: '#F7A70A' }}>Minhas Experiências</Container>
         </WithAnimation>
+        <Container className='background-space'></Container>
+        <Container className='background-experience'>
+            <Row className='h-100 d-flex justify-content-center align-items-center'>
+                <WithAnimation>
+                    <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'>
+                        <span className='text-before' style={{ color: '#F7A70A' }}>ACADÊMICO</span>
+                    </Col>
+                </WithAnimation>
+            </Row>
+            <Row className='h-100 d-flex justify-content-center align-items-center'>
+                <WithAnimation>
+                    <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'> 
+                        <div className='d-flex align-items-start flex-grow-1'>
+                            <p className='text-description' style={{ color: 'black' }}>
+                                Graduado em Bacharel de Ciência da Computação, com término de Curso em Dezembro de 2023. Orgulhosamente destaco a realização do meu TCC, que teve como nota final sua pontuação máxima - 10 pontos, o qual junto de minha equipe utilizamos React.js no framework de FrontEnd do projeto e Python no Backend, utilizando bibliotecas de redes neurais para a inteligência artificial e bibliotecas de integração com APIs utlizadas no projeto.                              
+                            </p>
+                        </div>
+                    </Col>
+                </WithAnimation>
+            </Row>
+            <Container className='background-space'></Container>
+            <Row className='h-100 d-flex justify-content-center align-items-center'>
+                <WithAnimation>
+                    <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'>
+                        <span className='text-before' style={{ color: '#F7A70A' }}>PROFISSIONAL</span>
+                    </Col>
+                </WithAnimation>
+            </Row>
+            <Row className='h-100 d-flex justify-content-center align-items-center'>
+                <WithAnimation>
+                    <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'> 
+                        <div className='d-flex align-items-start flex-grow-1'>
+                            <p className='text-description' style={{ color: 'black' }}>
+                                Iniciei minha trajetória profissional na área de T.I em Fevereiro/2020 onde tive meus primeiros contatos com banco de dados relacionais, e a linguagem de programação PASCAL. Nessa época eu atuava como suporte ao cliente na área de tecnologia, área que fiquei até 2021, onde consegui uma oportunidade de estágio, na empresa que estou atualmente, posteriormente efetivado a Desenvolvedor Júnior antes do término do meu contrato de estágio, e esse ano de 2024 promovido a Desenvolvedor Pleno.                              
+                            </p>
+                        </div>
+                    </Col>
+                </WithAnimation>
+            </Row>
+            <Container className='background-space'></Container>
+            <Row className='h-100 d-flex justify-content-center align-items-center'>
+                <WithAnimation>
+                    <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'> 
+                        <div className='d-flex align-items-start flex-grow-1'>
+                            <p className='text-description' style={{ color: 'black' }}>
+                                Em meu contrato CLT, sou desenvolvedor de sistemas ERP, de gestão empresarial, atuo em grandes clientes como Editora Arco, Aprende Brasil(Positivo) e Parana Clínicas. Trabalho com várias tecnologias, cada uma em seu âmbito específco, dentre elas cito o Delphi 7/XE nos sitemas ERP, C# no desenvolvimento de APIs REST, e no desenvolvimento de websites internos (Back-End e Front-End) com HTML5, CSS3, JavaScriptES6, Vue.Js, Node.Js e TypeScript                              
+                            </p>
+                        </div>
+                    </Col>
+                </WithAnimation>
+            </Row>
+            <Container className='background-space'></Container>
+            <Row className='h-100 d-flex justify-content-center align-items-center'>
+                <WithAnimation>
+                    <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'> 
+                        <div className='d-flex align-items-start flex-grow-1'>
+                            <p className='text-description' style={{ color: 'black' }}>
+                                Minha rotina consiste na análise de demandas passadas pelo cliente, ou pelo meu líder tecnico, avaliar sua severidade, e propor a melhor forma de corrigir, ou melhorar o que está sendo solicitado. Participo de reuniões diárias com os clientes dos projetos os quais participo, para entender melhor as suas necessidades e entregar um código de qualidade. No meu dia-a-dia também está muito presente a metodologia SCRUM, com a inclusão de Dailys e checkpoints nas Sprints, visando ter um end-to-end nas atividades, e estabelecer pontos resolvidos daquela Sprint.
+                            </p>
+                        </div>
+                    </Col>
+                </WithAnimation>
+            </Row>
+            <Container className='background-space'></Container>
+            <Row className='h-100 d-flex justify-content-center align-items-center'>
+                <WithAnimation>
+                    <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'> 
+                        <div className='d-flex align-items-start flex-grow-1'>
+                            <p className='text-description' style={{ color: 'black' }}>
+                                No que diz respeito ao controle de código e versionamento, utilizamos o GIT (Gitea), o qual é bem parecido com o GitHub, e distribuimos todas as atividades em Branches, sendo a Master a que contém codigos utilizados em ambiente de produção, Develop onde temos códigos que serão feitos os Merges com as branches de cada atividade, para posteriormente fazer o merge com a Master.
+                            </p>
+                        </div>
+                    </Col>
+                </WithAnimation>
+            </Row>
+        </Container>
         <Container className='background-space'></Container>
         <footer className="text-light py-3" style={{ backgroundColor: '#be7f01' }}>
             <Container fluid>

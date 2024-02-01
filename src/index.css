@@ -94,6 +94,16 @@ html, body {
   min-height: 10vh; 
 }
 
+.background-experience {
+  /* background-color: rgb(255, 0, 43); */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 20vh; 
+  text-align: center;
+}
+
+
 .background-cardapio {
   /* background-color: rgb(255, 0, 43); */
   background-size: contain;
@@ -136,11 +146,6 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: contain; 
-}
-
-
-.carousel-item {
-  height: 100%; 
 }
 
 .text-first{

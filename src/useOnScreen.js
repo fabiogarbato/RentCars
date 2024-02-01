@@ -6,7 +6,6 @@ const useOnScreen = (options) => {
 
     useEffect(() => {
         const observer = new IntersectionObserver(([entry]) => {
-            console.log(entry);
             setIsVisible(entry.isIntersecting);
         }, options);
 
