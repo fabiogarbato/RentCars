@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, {useState, useEffect } from 'react';
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaWhatsapp, FaLinkedinIn, FaGithub} from 'react-icons/fa';
 import logo from './images/logo.png';
 import Hollow from './images/hollow.png'
 import Dark from './images/dark.png'
@@ -87,7 +87,7 @@ const App = () => {
                 <Nav className="ms-auto">
                     <Nav.Link href="#sobre" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '40px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic'}}>  Quem Sou  </Nav.Link>
                     <Nav.Link href="#cardapio" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '40px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic' }}>Qualificações</Nav.Link>
-                    <Nav.Link href="#contato" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '40px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic' }}>Experiências</Nav.Link>
+                    <Nav.Link href="#experiencias" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '40px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic' }}>Experiências</Nav.Link>
                     <Nav.Link href="#localizacao" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '40px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic' }}>Missão</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
@@ -141,6 +141,52 @@ const App = () => {
                     </Col>
                 </WithAnimation>
             </Row>
+            <WithAnimation>
+                <Container className='background-button d-flex flex-column flex-sm-row justify-content-center align-items-center' style={{ minHeight: '10vh' }}>
+                        <Col xs={4} lg={3} className='d-flex justify-content-center align-items-center'>
+                            <a href="https://www.linkedin.com/in/fábio-garbato-046316196/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                                <Button
+                                    style={{
+                                        backgroundColor: '#F7A70A',
+                                        borderColor: 'black',
+                                        borderRadius: '50px',
+                                        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                                        fontSize: '20px', 
+                                        padding: '15px 30px', 
+                                        minWidth: '200px', 
+                                        display: 'flex', 
+                                        alignItems: 'center', 
+                                        justifyContent: 'center', 
+                                    }}
+                                    className='rounded-pill custom-btn'
+                                >
+                                    <FaLinkedinIn style={{ marginRight: '10px' }} />LinkedIn
+                                </Button>
+                            </a>  
+                        </Col>
+                        <Col xs={4} lg={3} className='d-flex justify-content-center align-items-center'>
+                            <a href="https://github.com/fabiogarbato" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                                <Button
+                                    style={{
+                                        backgroundColor: '#F7A70A',
+                                        borderColor: 'black',
+                                        borderRadius: '50px',
+                                        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                                        fontSize: '20px', 
+                                        padding: '15px 30px', 
+                                        minWidth: '200px', 
+                                        display: 'flex', 
+                                        alignItems: 'center', 
+                                        justifyContent: 'center', 
+                                    }}
+                                    className = 'rounded-pill custom-btn'
+                                >
+                                    <FaGithub style={{ marginRight: '10px' }} />GitHub  
+                                </Button>  
+                            </a>
+                        </Col> 
+                </Container>
+            </WithAnimation>
             <Container className='background-space'></Container>
             <Row className='h-100 d-flex justify-content-center align-items-center'>
                 <WithAnimation>
@@ -185,7 +231,7 @@ const App = () => {
                     <Row className="justify-content-center">
                         <Col xs={4} lg={3} className="d-flex justify-content-center px-lg-1">
                             <Image 
-                                src={Hollow} 
+                                src={Euro} 
                                 roundedCircle 
                                 className='zoom-hover'
                                 style={{ 
@@ -211,7 +257,7 @@ const App = () => {
                         </Col>
                         <Col xs={4} lg={3} className="d-flex justify-content-center px-lg-1">
                             <Image 
-                                src={Euro} 
+                                src={Hollow} 
                                 roundedCircle
                                 className='zoom-hover' 
                                 style={{ 
@@ -375,6 +421,10 @@ const App = () => {
                 Limpar
             </Button>
         </Container>
+        <Container className='background-space'></Container>
+        <WithAnimation>
+            <Container id='experiencias' className='text-first background-cardapio' style={{ color: '#F7A70A' }}>Minhas Experiências</Container>
+        </WithAnimation>
         <Container className='background-space'></Container>
         <footer className="text-light py-3" style={{ backgroundColor: '#be7f01' }}>
             <Container fluid>
