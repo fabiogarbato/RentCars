@@ -274,7 +274,7 @@ const App = () => {
         </Container>
         <Container id='cardapio' className='background-space'></Container>
         <WithAnimation>
-            <Container id='cardapio' className='text-first background-cardapio' style={{ color: '#F7A70A' }}>Minhas Qualificações</Container>
+            <Container id='cardapio' className='text-first background-cardapio' style={{ color: '#F7A70A' }}>Algumas de Minhas Qualificações</Container>
         </WithAnimation>
         <WithAnimation>
             <Container className='background-section2'>
