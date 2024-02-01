@@ -378,7 +378,7 @@ const App = () => {
         <Container className='background-space'></Container>
         <footer className="text-light py-3" style={{ backgroundColor: '#be7f01' }}>
             <Container fluid>
-                <p className="text-center mb-0" style={{color:'black'}}>© Fábio Garbato - {new Date().getFullYear()}</p>
+                <p className="text-center mb-0" style={{color:'black', fontFamily: 'Fira Sans Condensed , sans-serif'}}>© Fábio Garbato - {new Date().getFullYear()}</p>
             </Container>
         </footer>
         <WhatsAppButton phoneNumber="41987372059"/>
