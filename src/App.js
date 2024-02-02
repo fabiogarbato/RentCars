@@ -16,6 +16,7 @@ import JavaScript from './images/javascript.png'
 import Nodejs from './images/node.png'
 import React_framework from './images/react.png'
 import Fabio from './images/fabio.jpg';
+import Armory from './images/armory.png';
 import WithAnimation from './WithAnimation';
 import fetchCepData from './API_Cep';
 
@@ -84,10 +85,10 @@ const App = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
-                    <Nav.Link href="#sobre" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '40px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic'}}>  Apresentação  </Nav.Link>
-                    <Nav.Link href="#qualificacao" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '40px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic' }}>Qualificações</Nav.Link>
-                    <Nav.Link href="#experiencias" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '40px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic' }}>Experiências</Nav.Link>
-                    <Nav.Link href="#localizacao" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '40px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic' }}>Missão</Nav.Link>
+                    <Nav.Link href="#sobre" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '30px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic'}}>  Apresentação  </Nav.Link>
+                    <Nav.Link href="#qualificacao" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '30px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic' }}>Qualificações</Nav.Link>
+                    <Nav.Link href="#experiencias" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '30px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic' }}>Experiências</Nav.Link>
+                    <Nav.Link href="#missao" className="nav-link-hover" style={{ margin: '0 20px', fontSize: '30px', color: '#F7A70A', fontFamily: 'Fira Sans Condensed , sans-serif', fontWeight: 900, fontStyle: 'italic' }}>Missão</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
@@ -476,7 +477,7 @@ const App = () => {
                     <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'> 
                         <div className='d-flex align-items-start flex-grow-1'>
                             <p className='text-description' style={{ color: 'black' }}>
-                                Em meu contrato CLT, sou desenvolvedor de sistemas ERP, de gestão empresarial, atuo em grandes clientes como Editora Arco, Aprende Brasil(Positivo) e Parana Clínicas. Trabalho com várias tecnologias, cada uma em seu âmbito específco, dentre elas cito o <span style={{fontWeight: 'bold'}}>Delphi 7/XE</span> nos sitemas ERP, <span style={{fontWeight: 'bold'}}>C#</span> no desenvolvimento de <span style={{fontWeight: 'bold'}}>APIs REST</span>, e no desenvolvimento de websites internos (Back-End e Front-End) com <span style={{fontWeight: 'bold'}}>HTML5, CSS3, JavaScriptES6, Vue.Js, Node.Js e TypeScript.</span>                              
+                                Em meu contrato <span style={{fontWeight: 'bold'}}>CLT</span>, sou desenvolvedor de sistemas ERP, de gestão empresarial, atuo em grandes clientes como Editora Arco, Aprende Brasil(Positivo) e Parana Clínicas. Trabalho com várias tecnologias, cada uma em seu âmbito específco, dentre elas cito o <span style={{fontWeight: 'bold'}}>Delphi 7/XE</span> nos sitemas ERP, <span style={{fontWeight: 'bold'}}>C#</span> no desenvolvimento de <span style={{fontWeight: 'bold'}}>APIs REST</span>, e no desenvolvimento de websites internos (Back-End e Front-End) com <span style={{fontWeight: 'bold'}}>HTML5, CSS3, JavaScriptES6, Vue.Js, Node.Js e TypeScript.</span>                              
                             </p>
                         </div>
                     </Col>
@@ -501,6 +502,82 @@ const App = () => {
                         <div className='d-flex align-items-start flex-grow-1'>
                             <p className='text-description' style={{ color: 'black' }}>
                                 No que diz respeito ao <span style={{fontWeight: 'bold'}}>controle de código</span> e versionamento, utilizamos o <span style={{fontWeight: 'bold'}}>GIT (Gitea)</span>, o qual é bem parecido com o GitHub, e distribuimos todas as atividades em <span style={{fontWeight: 'bold'}}>Branches</span>, sendo a <span style={{fontWeight: 'bold'}}>Master</span> a que contém codigos utilizados em ambiente de produção, <span style={{fontWeight: 'bold'}}>Develop</span> onde temos códigos que serão feitos os Merges com as branches de cada atividade, para posteriormente fazer o merge com a Master.
+                            </p>
+                        </div>
+                    </Col>
+                </WithAnimation>
+            </Row>
+            <Container className='background-space'></Container>
+            <Row className='h-100 d-flex justify-content-center align-items-center'>
+                <WithAnimation>
+                    <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'> 
+                        <div className='d-flex align-items-start flex-grow-1'>
+                            <p className='text-description' style={{ color: 'black' }}>
+                                Nos meus projetos <span style={{fontWeight: 'bold'}}>freelancer</span>, atuo no desenvolvimento de WebSites institucionais, e participio de projetos de sistemas web com tecnologias como, <span style={{fontWeight: 'bold'}}>HTML5, CSS3, JavaScriptES6, Vue.Js, Node.Js e TypeScript.</span> Recentemente fui contratado para reescrever o site do meu cliente <span style={{fontWeight: 'bold'}}>Armory Consulting.</span> Abaixo link para conferir o preview que está previsto para o final de Fevereiro.
+                            </p>
+                        </div>
+                    </Col>
+                </WithAnimation>
+            </Row>
+            <Container className='background-space'></Container>
+            <Row className='h-100 d-flex justify-content-center align-items-center'>
+                <WithAnimation>
+                    <Col className='d-flex justify-content-center align-items-center'>
+                        <a href="https://armory-consulting.vercel.app" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                            <Image
+                                className="d-block zoom-hover"
+                                src={Armory}
+                                alt="Primeiro slide"
+                                style={{
+                                    maxWidth: '100%',
+                                    maxHeight: '30vh',
+                                    objectFit: 'contain',
+                                    objectPosition: 'center center',
+                                }}
+                            />
+                        </a>
+                    </Col>
+                </WithAnimation>
+            </Row>
+        </Container>
+        <Container className='background-space'></Container>
+        <WithAnimation>
+            <Container id='missao' className='text-first background-cardapio' style={{ color: '#F7A70A' }}>Missão, Visão e Valores</Container>
+        </WithAnimation>
+        <Container className='background-space'></Container>
+        <Container className='background-experience'>
+            <Row className='h-100 d-flex justify-content-center align-items-center'>
+                <WithAnimation>
+                    <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'>
+                        <span className='text-before' style={{ color: '#F7A70A' }}>MISSÃO</span>
+                    </Col>
+                </WithAnimation>
+            </Row>
+            <Row className='h-100 d-flex justify-content-center align-items-center'>
+                <WithAnimation>
+                    <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'> 
+                        <div className='d-flex align-items-start flex-grow-1'>
+                            <p className='text-description' style={{ color: 'black' }}>
+                                Meu compromisso é entregar um serviço de <span style={{fontWeight: 'bold'}}>qualidade</span>, guiado por seriedade e dedicação. Empenho-me em superar expectativas, visando eficiência em cada projeto.                               
+                            </p>
+                        </div>
+                    </Col>
+                </WithAnimation>
+            </Row>
+            <Container className='background-space'></Container>
+            <Row className='h-100 d-flex justify-content-center align-items-center'>
+                <WithAnimation>
+                    <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'>
+                        <span className='text-before' style={{ color: '#F7A70A' }}>VISÃO</span>
+                    </Col>
+                </WithAnimation>
+            </Row>
+            <Row className='h-100 d-flex justify-content-center align-items-center'>
+                <WithAnimation>
+                    <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'> 
+                        <div className='d-flex align-items-start flex-grow-1'>
+                            <p className='text-description' style={{ color: 'black' }}>
+                                Almejo ser conhecido no mercado pela <span style={{fontWeight: 'bold'}}>qualidade</span> do meu serviço. Estou comprometido com a melhoria contínua e a inovação, visando sempre a satisfação dos clientes nos projetos os quais participo.
                             </p>
                         </div>
                     </Col>
