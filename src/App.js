@@ -1,5 +1,4 @@
 import './index.css';
-import './tabela.css';
 import {Container, Row, Col, Image, Form, Button, InputGroup }  from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -200,7 +199,7 @@ const App = () => {
                     <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'> 
                         <div className='d-flex align-items-start flex-grow-1'>
                             <p className='text-description' style={{ color: 'black' }}>
-                                Apaixonado por tencologia, e entusiasta por carros, natural de São Paulo - SP, aos 17 anos me mudei para Curitiba, onde resido sozinho até hoje com meus 22 anos.                               
+                                Apaixonado por <span style={{fontWeight: 'bold'}}>tencologia</span>, e entusiasta por <span style={{fontWeight: 'bold'}}>carros</span>, natural de São Paulo - SP, aos 17 anos me mudei para Curitiba, onde resido sozinho até hoje com meus 22 anos.                               
                             </p>
                         </div>
                     </Col>
@@ -219,7 +218,7 @@ const App = () => {
                     <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'> 
                         <div className='d-flex align-items-start flex-grow-1'>
                             <p className='text-description' style={{ color: 'black' }}>
-                                Como entusiasta do setor automobilistico, gosto muito de sair nos meus tempos livres de carro, viajando, explorando novos lugares, e conhecendo novas culturas. Para conhecer novos carros, costumo alugar, para testar os mais diversos modelos! Também sou Gamer nas horas vagas, gostando muito de Simulação, SoulsLike e MetroidVania.
+                                Como entusiasta do setor automobilistico, gosto muito de sair nos meus tempos livres de carro, viajando, <span style={{fontWeight: 'bold'}}>explorando novos lugares</span>, e <span style={{fontWeight: 'bold'}}>conhecendo novas culturas</span>. Para conhecer novos carros, costumo <span style={{fontWeight: 'bold'}}>alugar</span>, para testar os mais diversos modelos! Também sou <span style={{fontWeight: 'bold'}}>Gamer</span> nas horas vagas, gostando muito de <span style={{fontWeight: 'bold'}}>Simulação, SoulsLike e MetroidVania.</span>
                             </p>
                         </div>
                     </Col>
@@ -446,7 +445,7 @@ const App = () => {
                     <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'> 
                         <div className='d-flex align-items-start flex-grow-1'>
                             <p className='text-description' style={{ color: 'black' }}>
-                                Graduado em Bacharel de Ciência da Computação, com término de Curso em Dezembro de 2023. Orgulhosamente destaco a realização do meu TCC, que teve como nota final sua pontuação máxima - 10 pontos, o qual junto de minha equipe utilizamos React.js no framework de FrontEnd do projeto e Python no Backend, utilizando bibliotecas de redes neurais para a inteligência artificial e bibliotecas de integração com APIs utlizadas no projeto.                              
+                                Graduado em Bacharel de <span style={{fontWeight: 'bold'}}>Ciência da Computação</span>, com término de Curso em Dezembro de 2023. Orgulhosamente destaco a realização do meu <span style={{fontWeight: 'bold'}}>TCC</span>, que teve como nota final sua pontuação máxima - <span style={{fontWeight: 'bold'}}>10 pontos</span>, o qual junto de minha equipe utilizamos <span style={{fontWeight: 'bold'}}>React.js</span> no framework de FrontEnd do projeto e <span style={{fontWeight: 'bold'}}>Python</span> no Backend, utilizando bibliotecas de redes neurais para a inteligência artificial e bibliotecas de integração com <span style={{fontWeight: 'bold'}}>APIs</span> utlizadas no projeto.                              
                             </p>
                         </div>
                     </Col>
@@ -465,7 +464,7 @@ const App = () => {
                     <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'> 
                         <div className='d-flex align-items-start flex-grow-1'>
                             <p className='text-description' style={{ color: 'black' }}>
-                                Iniciei minha trajetória profissional na área de T.I em Fevereiro/2020 onde tive meus primeiros contatos com banco de dados relacionais, e a linguagem de programação PASCAL. Nessa época eu atuava como suporte ao cliente na área de tecnologia, área que fiquei até 2021, onde consegui uma oportunidade de estágio, na empresa que estou atualmente, posteriormente efetivado a Desenvolvedor Júnior antes do término do meu contrato de estágio, e esse ano de 2024 promovido a Desenvolvedor Pleno.                              
+                                Iniciei minha trajetória profissional na área de <span style={{fontWeight: 'bold'}}>T.I</span> em Fevereiro/2020 onde tive meus primeiros contatos com banco de dados relacionais, e a linguagem de programação PASCAL. Nessa época eu atuava como <span style={{fontWeight: 'bold'}}>Suporte ao cliente</span> na área de tecnologia, área que fiquei até 2021, onde consegui uma oportunidade de <span style={{fontWeight: 'bold'}}>Estágio</span>, na empresa que estou atualmente, posteriormente efetivado a <span style={{fontWeight: 'bold'}}>Desenvolvedor Júnior</span> antes do término do meu contrato de estágio, e esse ano de 2024 promovido a <span style={{fontWeight: 'bold'}}>Desenvolvedor Pleno</span>.                              
                             </p>
                         </div>
                     </Col>
@@ -477,7 +476,7 @@ const App = () => {
                     <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'> 
                         <div className='d-flex align-items-start flex-grow-1'>
                             <p className='text-description' style={{ color: 'black' }}>
-                                Em meu contrato CLT, sou desenvolvedor de sistemas ERP, de gestão empresarial, atuo em grandes clientes como Editora Arco, Aprende Brasil(Positivo) e Parana Clínicas. Trabalho com várias tecnologias, cada uma em seu âmbito específco, dentre elas cito o Delphi 7/XE nos sitemas ERP, C# no desenvolvimento de APIs REST, e no desenvolvimento de websites internos (Back-End e Front-End) com HTML5, CSS3, JavaScriptES6, Vue.Js, Node.Js e TypeScript                              
+                                Em meu contrato CLT, sou desenvolvedor de sistemas ERP, de gestão empresarial, atuo em grandes clientes como Editora Arco, Aprende Brasil(Positivo) e Parana Clínicas. Trabalho com várias tecnologias, cada uma em seu âmbito específco, dentre elas cito o <span style={{fontWeight: 'bold'}}>Delphi 7/XE</span> nos sitemas ERP, <span style={{fontWeight: 'bold'}}>C#</span> no desenvolvimento de <span style={{fontWeight: 'bold'}}>APIs REST</span>, e no desenvolvimento de websites internos (Back-End e Front-End) com <span style={{fontWeight: 'bold'}}>HTML5, CSS3, JavaScriptES6, Vue.Js, Node.Js e TypeScript.</span>                              
                             </p>
                         </div>
                     </Col>
@@ -489,7 +488,7 @@ const App = () => {
                     <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'> 
                         <div className='d-flex align-items-start flex-grow-1'>
                             <p className='text-description' style={{ color: 'black' }}>
-                                Minha rotina consiste na análise de demandas passadas pelo cliente, ou pelo meu líder tecnico, avaliar sua severidade, e propor a melhor forma de corrigir, ou melhorar o que está sendo solicitado. Participo de reuniões diárias com os clientes dos projetos os quais participo, para entender melhor as suas necessidades e entregar um código de qualidade. No meu dia-a-dia também está muito presente a metodologia SCRUM, com a inclusão de Dailys e checkpoints nas Sprints, visando ter um end-to-end nas atividades, e estabelecer pontos resolvidos daquela Sprint.
+                                Minha rotina consiste na <span style={{fontWeight: 'bold'}}>análise de demandas</span> passadas pelo cliente, ou pelo meu líder tecnico, avaliar sua severidade, e propor a melhor forma de corrigir, ou melhorar o que está sendo solicitado. Participo de reuniões diárias com os clientes dos projetos os quais participo, para entender melhor as suas necessidades e entregar um <span style={{fontWeight: 'bold'}}>código de qualidade</span>. No meu dia-a-dia também está muito presente a metodologia <span style={{fontWeight: 'bold'}}>SCRUM</span>, com a inclusão de <span style={{fontWeight: 'bold'}}>Dailys</span> e <span style={{fontWeight: 'bold'}}>checkpoints</span> nas Sprints, visando ter um end-to-end nas atividades, e estabelecer pontos resolvidos daquela Sprint.
                             </p>
                         </div>
                     </Col>
@@ -501,7 +500,7 @@ const App = () => {
                     <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'> 
                         <div className='d-flex align-items-start flex-grow-1'>
                             <p className='text-description' style={{ color: 'black' }}>
-                                No que diz respeito ao controle de código e versionamento, utilizamos o GIT (Gitea), o qual é bem parecido com o GitHub, e distribuimos todas as atividades em Branches, sendo a Master a que contém codigos utilizados em ambiente de produção, Develop onde temos códigos que serão feitos os Merges com as branches de cada atividade, para posteriormente fazer o merge com a Master.
+                                No que diz respeito ao <span style={{fontWeight: 'bold'}}>controle de código</span> e versionamento, utilizamos o <span style={{fontWeight: 'bold'}}>GIT (Gitea)</span>, o qual é bem parecido com o GitHub, e distribuimos todas as atividades em <span style={{fontWeight: 'bold'}}>Branches</span>, sendo a <span style={{fontWeight: 'bold'}}>Master</span> a que contém codigos utilizados em ambiente de produção, <span style={{fontWeight: 'bold'}}>Develop</span> onde temos códigos que serão feitos os Merges com as branches de cada atividade, para posteriormente fazer o merge com a Master.
                             </p>
                         </div>
                     </Col>
