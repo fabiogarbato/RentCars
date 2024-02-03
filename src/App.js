@@ -18,6 +18,7 @@ import React_framework from './images/react.png'
 import Fabio from './images/fabio.jpg';
 import Armory from './images/armory.png';
 import WithAnimation from './WithAnimation';
+import CEP from './API_Cep';
 
 const WhatsAppButton = ({ phoneNumber }) => {
     const whatsappLink = `https://wa.me/55${phoneNumber}?text=Olá!%20Estamos%20entrando%20em%20contato%20contigo%20para%20informa-lo%20que%20você%20foi%20*APROVADO*%20em%20nosso%20processo%20seletivo!%20:D`;
