@@ -18,7 +18,6 @@ import React_framework from './images/react.png'
 import Fabio from './images/fabio.jpg';
 import Armory from './images/armory.png';
 import WithAnimation from './WithAnimation';
-import fetchCepData from './API_Cep';
 
 const WhatsAppButton = ({ phoneNumber }) => {
     const whatsappLink = `https://wa.me/55${phoneNumber}?text=Olá!%20Estamos%20entrando%20em%20contato%20contigo%20para%20informa-lo%20que%20você%20foi%20*APROVADO*%20em%20nosso%20processo%20seletivo!%20:D`;
@@ -46,34 +45,42 @@ const App = () => {
         }
       }, []);
     
-      const handleCepSubmit = async (event) => {
+    const handleCepSubmit = async (event) => {
         event.preventDefault();
-        const data = await fetchCepData(cep);
-        if (data) {
-          setCepData(data);
-          localStorage.setItem('cepData', JSON.stringify(data));
+        const url = `http://localhost:8000/fetchCepData.php?cep=${cep}`;
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            if (data && !data.error) {
+                setCepData(data);
+                localStorage.setItem('cepData', JSON.stringify(data));
+            } else {
+                console.error(data.error || 'Erro ao buscar dados do CEP');
+            }
+        } catch (error) {
+            console.error('Erro na requisição:', error);
         }
-      };
+    };
     
-      const handleChange = (e) => {
+    const handleChange = (e) => {
         const { name, value } = e.target;
         setCepData(prevState => ({
-          ...prevState,
-          [name]: value
+            ...prevState,
+            [name]: value
         }));
         localStorage.setItem('cepData', JSON.stringify({ ...cepData, [name]: value }));
-      };
+    };
 
-      const handleClear = () => {
+    const handleClear = () => {
         setCepData({
-          logradouro: '',
-          bairro: '',
-          localidade: '',
-          uf: ''
+            logradouro: '',
+            bairro: '',
+            localidade: '',
+            uf: ''
         });
         setCep('');
         localStorage.removeItem('cepData'); 
-      };
+    };
     
 
   return (

@@ -16,7 +16,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start-js": "react-scripts start",
+    "start-php": "php -S localhost:8000 -t src/php",
+    "start": "concurrently \"npm run start-js\" \"npm run start-php\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -38,5 +40,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
+  
 }
