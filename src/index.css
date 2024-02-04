@@ -192,6 +192,26 @@ html, body {
   align-items: center;
 }
 
+.float-button {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 120px; 
+  right: 40px;
+  background-color: #F7A70A;
+  color: #FFF;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 1px 1px 2px #888;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; 
+  text-decoration: none; 
+}
+
 .move {
   transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
   transform: scale(1); 

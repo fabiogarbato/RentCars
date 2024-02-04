@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, {useState, useEffect } from 'react';
-import { FaWhatsapp, FaLinkedinIn, FaGithub} from 'react-icons/fa';
+import { FaWhatsapp, FaLinkedinIn, FaGithub, FaArrowUp } from 'react-icons/fa';
 import logo from './images/logo.png';
 import Hollow from './images/hollow.png'
 import Dark from './images/dark.png'
@@ -28,6 +28,14 @@ const WhatsAppButton = ({ phoneNumber }) => {
       </a>
     );
   };
+
+const ScrollToButton = ({ targetId }) => {
+    return (
+        <a href={`#${targetId}`} className="float-button">
+            <FaArrowUp />
+        </a>
+    );
+};
 
 const App = () => {  
 
@@ -83,10 +91,9 @@ const App = () => {
         localStorage.removeItem('cepData'); 
     };
     
-
   return (
     <Container fluid style={{ backgroundColor: 'black', minHeight: '100vh' }}>
-        <Navbar bg="blue" expand="lg">
+        <Navbar id='inicio' bg="blue" expand="lg">
             <Navbar.Brand>
                 <Image src={logo} alt="Logo" style={{ maxWidth: '15vh', marginRight: '10px', marginLeft: '60px'}} />
             </Navbar.Brand>
@@ -591,6 +598,25 @@ const App = () => {
                     </Col>
                 </WithAnimation>
             </Row>
+            <Container className='background-space'></Container>
+            <Row className='h-100 d-flex justify-content-center align-items-center'>
+                <WithAnimation>
+                    <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'>
+                        <span className='text-before' style={{ color: '#F7A70A' }}>VALORES</span>
+                    </Col>
+                </WithAnimation>
+            </Row>
+            <Row className='h-100 d-flex justify-content-center align-items-center'>
+                <WithAnimation>
+                    <Col xs={12} lg={6} className='d-flex justify-content-center align-items-center'> 
+                        <div className='d-flex align-items-start flex-grow-1'>
+                            <p className='text-description' style={{ color: 'black' }}>
+                                Minha conduta é pautada na <span style={{fontWeight: 'bold'}}>honestidade</span>,<span style={{fontWeight: 'bold'}}> responsabilidade pessoal</span> e no <span style={{fontWeight: 'bold'}}> respeito</span> pelas pessoas com quem interajo. Prezo pela transparência em todas as minhas ações e vejo a <span style={{fontWeight: 'bold'}}> colaboração</span> como essencial para a conquista de resultados de qualidade. Dedico-me à busca incessante pela <span style={{fontWeight: 'bold'}}> excelência</span> e à inovação consciente, visando o desenvolvimento sustentável. Honro meus compromissos com dedicação e sou fiel aos princípios de integridade e ética profissional, buscando inspirar <span style={{fontWeight: 'bold'}}> confiança</span> em cada cliente e em cada projeto realizado.
+                            </p>
+                        </div>
+                    </Col>
+                </WithAnimation>
+            </Row>
         </Container>
         <Container className='background-space'></Container>
         <footer className="text-light py-3" style={{ backgroundColor: '#be7f01' }}>
@@ -598,6 +624,7 @@ const App = () => {
                 <p className="text-center mb-0" style={{color:'black', fontFamily: 'Fira Sans Condensed , sans-serif'}}>© Fábio Garbato - {new Date().getFullYear()}</p>
             </Container>
         </footer>
+        <ScrollToButton targetId="inicio"/>
         <WhatsAppButton phoneNumber="41987372059"/>
     </Container>
   );
